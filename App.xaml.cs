@@ -1,4 +1,6 @@
-﻿namespace MAUI_ToDo
+﻿using MAUI_ToDo.MVVM.Views;
+
+namespace MAUI_ToDo
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new MainView();
         }
     }
 }
