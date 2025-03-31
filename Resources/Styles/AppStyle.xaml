@@ -21,6 +21,21 @@
     </Style>
 
     <!--#region CARD-->
+    <Shadow
+        x:Key="shadow"
+        Brush="#cfeafb"
+        Opacity="0.6"
+        Radius="15"
+        Offset="10,15" />
+
+    <Style TargetType="RoundRectangle">
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Fill" Value="White" />
+        <Setter Property="WidthRequest" Value="250" />
+        <Setter Property="HeightRequest" Value="150" />
+        <Setter Property="Shadow" Value="{StaticResource shadow}" />
+    </Style>
+
     <Style Class="CardTitle" TargetType="Label">
         <Setter Property="FontSize" Value="Medium" />
         <Setter Property="FontAttributes" Value="Bold" />

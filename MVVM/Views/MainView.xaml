@@ -10,15 +10,18 @@
             <Label StyleClass="LightAzure, SubHeader" Text="CATEGORIE" />
             <CollectionView Grid.Row="1" ItemsSource="{Binding Categories}">
                 <CollectionView.ItemsLayout>
-                    <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
+                    <LinearItemsLayout ItemSpacing="5" Orientation="Horizontal" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <VerticalStackLayout>
-                            <Label StyleClass="LightAzure" Text="{Binding PendingTasks, StringFormat='{0} Attività'}" />
-                            <Label StyleClass="LightAzure, CardTitle" Text="{Binding Name}" />
-                            <ProgressBar Progress=".5" ProgressColor="{Binding Color}" />
-                        </VerticalStackLayout>
+                        <Grid Padding="10">
+                            <RoundRectangle />
+                            <VerticalStackLayout Padding="15" Spacing="10">
+                                <Label StyleClass="LightAzure" Text="{Binding PendingTasks, StringFormat='{0} Attività'}" />
+                                <Label StyleClass="LightAzure, CardTitle" Text="{Binding Name}" />
+                                <ProgressBar Progress="{Binding Percentage}" ProgressColor="{Binding Color}" />
+                            </VerticalStackLayout>
+                        </Grid>
 
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
