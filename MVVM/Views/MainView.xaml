@@ -15,7 +15,9 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <VerticalStackLayout>
+                            <Label StyleClass="LightAzure" Text="{Binding PendingTasks, StringFormat='{0} Attività'}" />
                             <Label StyleClass="LightAzure, CardTitle" Text="{Binding Name}" />
+                            <ProgressBar Progress=".5" ProgressColor="{Binding Color}" />
                         </VerticalStackLayout>
 
                     </DataTemplate>
