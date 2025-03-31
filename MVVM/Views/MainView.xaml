@@ -6,7 +6,22 @@
     Title="MainView">
     <Grid Margin="15" RowDefinitions=".1*,.3*,.6*">
         <Label StyleClass="Header, DarkAzure" Text="To do" />
-        <Grid Grid.Row="1" BackgroundColor="Red" />
+        <Grid Grid.Row="1" RowDefinitions="0.2*,0.8*">
+            <Label StyleClass="LightAzure, SubHeader" Text="CATEGORIE" />
+            <CollectionView Grid.Row="1" ItemsSource="{Binding Categories}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="10" Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout>
+                            <Label StyleClass="LightAzure, CardTitle" Text="{Binding Name}" />
+                        </VerticalStackLayout>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
         <Grid Grid.Row="2" BackgroundColor="Black" />
     </Grid>
 </ContentPage>
