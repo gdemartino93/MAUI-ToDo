@@ -71,7 +71,7 @@ namespace MAUI_ToDo.MVVM.ViewModels
                 }
             };
         }
-        private void UpdateData()
+        public void UpdateData()
         {
             foreach (var category in Categories)
             {
