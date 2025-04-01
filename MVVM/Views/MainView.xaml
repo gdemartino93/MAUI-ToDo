@@ -8,7 +8,10 @@
         <Label StyleClass="Header, DarkAzure" Text="Cose da fare" />
         <Grid Grid.Row="1" RowDefinitions="0.2*,0.8*">
             <Label StyleClass="LightAzure, SubHeader" Text="CATEGORIE" />
-            <CollectionView Grid.Row="1" ItemsSource="{Binding Categories}">
+            <CollectionView
+                Grid.Row="1"
+                ItemsSource="{Binding Categories}"
+                ItemsUpdatingScrollMode="KeepLastItemInView">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout ItemSpacing="5" Orientation="Horizontal" />
                 </CollectionView.ItemsLayout>
@@ -33,7 +36,10 @@
             BackgroundColor="White"
             RowDefinitions=".2*,.8*">
             <Label StyleClass="LightAzure, SubHeader" Text="ATTIVITÁ" />
-            <CollectionView Grid.Row="1" ItemsSource="{Binding Tasks}">
+            <CollectionView
+                Grid.Row="1"
+                ItemsSource="{Binding Tasks}"
+                ItemsUpdatingScrollMode="KeepLastItemInView">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout ItemSpacing="10" Orientation="Vertical" />
                 </CollectionView.ItemsLayout>

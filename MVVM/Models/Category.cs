@@ -15,5 +15,6 @@ namespace MAUI_ToDo.MVVM.Models
         public string Color { get; set; }
         public int PendingTasks { get; set; }
         public float Percentage { get; set; }
+        public bool IsSelected { get; set; }
     }
 }

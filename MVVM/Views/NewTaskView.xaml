@@ -38,8 +38,14 @@
             Margin="0,0,0,10"
             HorizontalOptions="Center"
             Spacing="10">
-            <Button StyleClass="AddButton" Text="Aggiungi attività" />
-            <Button StyleClass="AddButton" Text="Aggiungi categoria" />
+            <Button
+                Clicked="Button_Clicked_AddTask"
+                StyleClass="AddButton"
+                Text="Aggiungi attività" />
+            <Button
+                Clicked="Button_Clicked_AddCategory"
+                StyleClass="AddButton"
+                Text="Aggiungi categoria" />
         </HorizontalStackLayout>
 
     </Grid>
