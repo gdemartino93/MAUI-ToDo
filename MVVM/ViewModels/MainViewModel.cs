@@ -84,7 +84,7 @@ namespace MAUI_ToDo.MVVM.ViewModels
 
                 foreach (var task in Tasks)
                 {
-                    string? categoryColor = Categories.Where(c => c.Id == task.CategoryId).Select(c => c.Name).FirstOrDefault();
+                    string? categoryColor = Categories.Where(c => c.Id == task.CategoryId).Select(c => c.Color).FirstOrDefault();
                     task.Color = categoryColor;
                 }
 

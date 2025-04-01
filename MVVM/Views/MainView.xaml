@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="MainView">
     <Grid Margin="15" RowDefinitions=".1*,.3*,.6*">
-        <Label StyleClass="Header, DarkAzure" Text="To do" />
+        <Label StyleClass="Header, DarkAzure" Text="Cose da fare" />
         <Grid Grid.Row="1" RowDefinitions="0.2*,0.8*">
             <Label StyleClass="LightAzure, SubHeader" Text="CATEGORIE" />
             <CollectionView Grid.Row="1" ItemsSource="{Binding Categories}">
@@ -27,6 +27,30 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </Grid>
-        <Grid Grid.Row="2" BackgroundColor="Black" />
+        <Grid
+            Grid.Row="2"
+            Padding="10"
+            BackgroundColor="White"
+            RowDefinitions=".2*,.8*">
+            <Label StyleClass="LightAzure, SubHeader" Text="ATTIVITÁ" />
+            <CollectionView Grid.Row="1" ItemsSource="{Binding Tasks}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="10" Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="Transparent">
+                            <Grid Padding="10">
+                                <HorizontalStackLayout>
+
+                                    <CheckBox IsChecked="{Binding IsCompleted}" Color="{Binding Color}" />
+                                    <Label Text="{Binding Name}" VerticalTextAlignment="Center" />
+                                </HorizontalStackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
     </Grid>
 </ContentPage>
