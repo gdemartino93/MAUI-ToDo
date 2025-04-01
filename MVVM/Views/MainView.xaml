@@ -42,9 +42,20 @@
                         <Frame BorderColor="Transparent">
                             <Grid Padding="10">
                                 <HorizontalStackLayout>
-
-                                    <CheckBox IsChecked="{Binding IsCompleted}" Color="{Binding Color}" />
-                                    <Label Text="{Binding Name}" VerticalTextAlignment="Center" />
+                                    <CheckBox
+                                        x:Name="checkBoxIsCompleted"
+                                        IsChecked="{Binding IsCompleted}"
+                                        Color="{Binding Color, Converter={StaticResource ColorConverter}}" />
+                                    <Label Text="{Binding Name}" VerticalTextAlignment="Center">
+                                        <Label.Triggers>
+                                            <DataTrigger
+                                                Binding="{Binding Source={x:Reference checkBoxIsCompleted}, Path=IsChecked}"
+                                                TargetType="Label"
+                                                Value="True">
+                                                <Setter Property="TextDecorations" Value="Strikethrough" />
+                                            </DataTrigger>
+                                        </Label.Triggers>
+                                    </Label>
                                 </HorizontalStackLayout>
                             </Grid>
                         </Frame>
