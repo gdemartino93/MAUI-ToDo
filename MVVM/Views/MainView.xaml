@@ -3,7 +3,7 @@
     x:Class="MAUI_ToDo.MVVM.Views.MainView"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="MainView">
+    Title="Cose da fare">
     <Grid Margin="15" RowDefinitions=".1*,.3*,.6*">
         <Label StyleClass="Header, DarkAzure" Text="Cose da fare" />
         <Grid Grid.Row="1" RowDefinitions="0.2*,0.8*">
@@ -64,5 +64,10 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </Grid>
+        <Button
+            Grid.Row="2"
+            Clicked="Button_Clicked_AddTask"
+            StyleClass="AddTaskButtonCircle"
+            Text="+" />
     </Grid>
 </ContentPage>

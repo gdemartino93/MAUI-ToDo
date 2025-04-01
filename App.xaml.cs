@@ -9,7 +9,7 @@ namespace MAUI_ToDo
         {
             InitializeComponent();
 
-            MainPage = new NewTaskView();
+            MainPage = new NavigationPage(new MainView());
 
 #if ANDROID
             Microsoft.Maui.Handlers.EntryHandler.Mapper

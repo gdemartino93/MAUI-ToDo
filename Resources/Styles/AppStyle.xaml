@@ -41,4 +41,27 @@
         <Setter Property="FontAttributes" Value="Bold" />
     </Style>
     <!--#endregion-->
+
+    <!--#region Add new task-->
+    <Style x:Key="Task" TargetType="Entry">
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="PlaceholderColor" Value="{StaticResource LightAzure}" />
+        <Setter Property="FontSize" Value="Large" />
+    </Style>
+
+    <Style Class="AddTaskButtonCircle" TargetType="Button">
+        <Setter Property="WidthRequest" Value="70" />
+        <Setter Property="HeightRequest" Value="70" />
+        <Setter Property="CornerRadius" Value="50" />
+        <Setter Property="HorizontalOptions" Value="End" />
+        <Setter Property="VerticalOptions" Value="End" />
+        <Setter Property="FontSize" Value="Medium" />
+        <Setter Property="FontAttributes" Value="Bold" />
+    </Style>
+    <Style Class="AddButton" TargetType="Button">
+        <Setter Property="CornerRadius" Value="20" />
+        <Setter Property="MinimumHeightRequest" Value="40" />
+    </Style>
+    <!--#endregion-->
 </ResourceDictionary>

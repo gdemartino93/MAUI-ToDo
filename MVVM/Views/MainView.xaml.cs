@@ -15,4 +15,17 @@ public partial class MainView : ContentPage
     {
 		_mainViewModel.UpdateData();
     }
+
+    private void Button_Clicked_AddTask(object sender, EventArgs e)
+    {
+		var taskView = new NewTaskView
+		{
+			BindingContext = new NewTaskViewModel
+			{
+				Tasks = _mainViewModel.Tasks,
+				Categories = _mainViewModel.Categories
+			}
+		};
+		Navigation.PushAsync(taskView);
+    }
 }
